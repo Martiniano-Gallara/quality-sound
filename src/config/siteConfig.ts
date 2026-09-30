@@ -186,10 +186,12 @@ export const SITE_CONFIG = {
     },
     {
       id: "gal-3",
-      title: "Iluminación Profesional para Eventos",
-      category: "Iluminación",
-      image: "/images/gallery_iluminacion_eventos.jpg",
-      alt: "Ambientación e iluminación profesional para eventos Quality Sound",
+      title: "Iluminación & Estructuras Truss en Bodas",
+      category: "Iluminación & Truss",
+      image: "/images/gallery_boda_thumb.jpg",
+      alt: "Puesta en escena de iluminación, trusses circulares y bolas de espejos para boda Quality Sound",
+      videoUrl: "/videos/boda_iluminacion.mp4",
+      instagramUrl: "https://www.instagram.com/p/DDht4BEvDUu/",
     },
     {
       id: "gal-4",
