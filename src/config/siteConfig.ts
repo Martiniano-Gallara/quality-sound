@@ -202,10 +202,12 @@ export const SITE_CONFIG = {
     },
     {
       id: "gal-5",
-      title: "Show de Láseres y Pantallas de Gran Formato",
-      category: "Efectos & Video",
-      image: "/images/gallery_laser.jpg",
-      alt: "Show lumínico sincronizado con lásers rojos y azules",
+      title: "Show Robot Depredador LED & Láser para Fiestas",
+      category: "Show Robot LED",
+      image: "/images/gallery_robot_thumb.jpg",
+      alt: "Show interactivo de Robot Depredador con armadura LED y lásers Quality Sound",
+      videoUrl: "/videos/robot_depredador.mp4",
+      instagramUrl: "https://www.instagram.com/p/DBwzl_ehspD/",
     },
     {
       id: "gal-6",
