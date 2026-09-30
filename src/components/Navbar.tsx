@@ -85,15 +85,6 @@ export default function Navbar() {
 
           {/* Mobile Right Controls */}
           <div className="flex md:hidden items-center gap-2">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-[#e61919] text-white shadow-[0_0_12px_rgba(230,25,25,0.5)] active:scale-95"
-              aria-label="Hablar por WhatsApp"
-            >
-              <MessageCircle className="w-5 h-5 fill-white/20" />
-            </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-300 hover:text-white rounded-lg bg-white/5 border border-white/10 active:scale-95 transition-colors"
