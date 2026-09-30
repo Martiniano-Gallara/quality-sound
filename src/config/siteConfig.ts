@@ -170,10 +170,12 @@ export const SITE_CONFIG = {
   gallery: [
     {
       id: "gal-1",
-      title: "Pantallas LED para Eventos Escolares",
-      category: "Pantallas LED",
-      image: "/images/gallery_led_escolares.jpg",
-      alt: "Pantalla LED Quality Sound para eventos escolares y actos institucionales",
+      title: "Pantallas LED 3.9 Outdoor para Eventos",
+      category: "Pantallas LED Outdoor",
+      image: "/images/gallery_outdoor_thumb.jpg",
+      alt: "Montaje y transmisión en Pantalla LED 3.9 Outdoor Quality Sound en evento al aire libre",
+      videoUrl: "/videos/pantallas_led_outdoor.mp4",
+      instagramUrl: "https://www.instagram.com/p/DBezp5gBx_-/",
     },
     {
       id: "gal-2",
@@ -195,10 +197,10 @@ export const SITE_CONFIG = {
     },
     {
       id: "gal-4",
-      title: "Consola de Mezcla Digital & Operación de Audio",
-      category: "Sonido Profesional",
-      image: "/images/service_sound.jpg",
-      alt: "Operación de consola digital en vivo para recital masivo",
+      title: "Pantallas LED para Actos Escolares e Institucionales",
+      category: "Pantallas LED",
+      image: "/images/gallery_led_escolares.jpg",
+      alt: "Pantalla LED Quality Sound para eventos escolares y actos institucionales",
     },
     {
       id: "gal-5",
