@@ -9,7 +9,7 @@ export default function Gallery() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
 
-  const basePath = process.env.NODE_ENV === "production" ? "/quality-sound" : "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const images = SITE_CONFIG.gallery;
 
   const handleNext = useCallback(() => {
