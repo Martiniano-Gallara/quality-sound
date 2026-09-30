@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { Rajdhani, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/config/siteConfig";
 
-const rajdhani = Rajdhani({
-  weight: ["500", "600", "700"],
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -73,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${rajdhani.variable} ${plusJakarta.variable} scroll-smooth`}
+      className={`${inter.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-[#050507] text-[#e2e8f0] font-sans antialiased selection:bg-[#e61919] selection:text-white flex flex-col">
         {children}
