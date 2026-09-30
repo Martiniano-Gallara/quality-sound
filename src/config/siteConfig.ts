@@ -54,7 +54,7 @@ export const SITE_CONFIG = {
 
   contact: {
     // Configurable WhatsApp: can be replaced with real number anytime (format: country code + number, e.g. 549341xxxxxxx)
-    whatsappPhone: "5491123456789", 
+    whatsappPhone: "5493576520951",
     whatsappDefaultText:
       "¡Hola Quality Sound! Quiero solicitar un presupuesto para sonido, iluminación y pantallas LED para mi evento.",
     instagramUrl: "https://instagram.com/qualitysound",
