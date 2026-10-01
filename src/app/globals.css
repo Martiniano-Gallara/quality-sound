@@ -11,11 +11,11 @@
   }
 
   .font-heading {
-    font-family: var(--font-inter), sans-serif;
-    letter-spacing: 0.02em;
+    font-family: var(--font-heading), sans-serif;
+    letter-spacing: 0.03em;
   }
   .font-sans {
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-sans), sans-serif;
   }
 
   html {
