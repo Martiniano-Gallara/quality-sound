@@ -64,23 +64,23 @@ export default function Hero() {
         </p>
 
         {/* Primary & Secondary CTAs */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+        <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none">
           <a
             href={whatsappBudgetUrl}
             target="_blank"
             rel="noopener noreferrer"
             id="hero-cta-whatsapp"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-sm md:text-base font-bold tracking-wider uppercase text-white bg-gradient-to-r from-[#e61919] via-[#cc1414] to-[#991b1b] hover:from-[#ff2e2e] hover:to-[#e61919] transition-all duration-300 shadow-[0_0_30px_rgba(230,25,25,0.45)] hover:shadow-[0_0_40px_rgba(230,25,25,0.7)] hover:-translate-y-0.5 active:translate-y-0 border border-red-500/40 group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase text-white bg-gradient-to-r from-[#e61919] via-[#cc1414] to-[#991b1b] hover:from-[#ff2e2e] hover:to-[#e61919] transition-all duration-300 shadow-[0_0_24px_rgba(230,25,25,0.4)] hover:shadow-[0_0_32px_rgba(230,25,25,0.65)] hover:-translate-y-0.5 active:translate-y-0 border border-red-500/40 group"
           >
-            <MessageCircle className="w-5 h-5 fill-white/20 group-hover:scale-110 transition-transform" />
+            <MessageCircle className="w-4 h-4 fill-white/20 group-hover:scale-110 transition-transform" />
             <span>Solicitar presupuesto</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </a>
 
           <Link
             href="#servicios"
             id="hero-cta-services"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-sm md:text-base font-semibold tracking-wide uppercase text-slate-200 bg-white/5 hover:bg-white/10 hover:text-white border border-white/15 hover:border-white/30 backdrop-blur-md transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold tracking-wide uppercase text-slate-200 bg-white/5 hover:bg-white/10 hover:text-white border border-white/15 hover:border-white/30 backdrop-blur-md transition-all duration-200"
           >
             <span>Ver nuestros servicios</span>
           </Link>
