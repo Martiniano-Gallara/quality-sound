@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import ValueProposition from "@/components/ValueProposition";
 import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import FinalCta from "@/components/FinalCta";
@@ -42,7 +41,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Services />
-        <ValueProposition />
         <Gallery />
         <About />
         <FinalCta />
