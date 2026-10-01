@@ -9,7 +9,6 @@ export default function Gallery() {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const images = SITE_CONFIG.gallery;
 
   const handleNext = useCallback(() => {
@@ -87,7 +86,7 @@ export default function Gallery() {
                 {isPlaying && item.videoUrl ? (
                   <div className="relative w-full h-full bg-black flex items-center justify-center">
                     <video
-                      src={`${basePath}${item.videoUrl}`}
+                      src={item.videoUrl}
                       controls
                       autoPlay
                       playsInline
@@ -239,7 +238,7 @@ export default function Gallery() {
             {images[selectedImageIndex].videoUrl ? (
               <div className="relative w-full max-w-4xl h-[60vh] sm:h-[72vh] flex items-center justify-center rounded-xl overflow-hidden border border-white/15 shadow-2xl bg-black">
                 <video
-                  src={`${basePath}${images[selectedImageIndex].videoUrl}`}
+                  src={images[selectedImageIndex].videoUrl}
                   controls
                   autoPlay
                   playsInline

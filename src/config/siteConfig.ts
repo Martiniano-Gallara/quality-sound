@@ -32,6 +32,29 @@ export interface ValuePillar {
   description?: string;
 }
 
+export const BASE_PATH =
+  process.env.NEXT_PUBLIC_BASE_PATH ||
+  (process.env.NODE_ENV === "production" ||
+  (typeof process !== "undefined" && process.argv?.includes?.("build"))
+    ? "/quality-sound"
+    : "");
+
+export function assetPath(path: string): string {
+  if (!path) return "";
+  if (
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("data:")
+  ) {
+    return path;
+  }
+  const clean = path.startsWith("/") ? path : `/${path}`;
+  if (BASE_PATH && clean.startsWith(BASE_PATH)) {
+    return clean;
+  }
+  return `${BASE_PATH}${clean}`;
+}
+
 export const SITE_CONFIG = {
   name: "Quality Sound",
   concept: "Sonido, iluminación y pantallas LED para eventos.",
@@ -76,7 +99,7 @@ export const SITE_CONFIG = {
       title: "SONIDO PROFESIONAL",
       tagline: "Potencia, definición y cobertura acústica impecable",
       description: "Sistemas de sonido adaptados al tamaño y características de cada evento.",
-      image: "/images/service_sound.jpg",
+      image: assetPath("/images/service_sound.jpg"),
       features: [
         "Sistemas Line Array de alta fidelidad",
         "Consolas digitales de última generación",
@@ -90,7 +113,7 @@ export const SITE_CONFIG = {
       title: "ILUMINACIÓN",
       tagline: "Atmósferas visuales, dinamismo y diseño lumínico",
       description: "Iluminación profesional para generar la atmósfera adecuada en cada espacio.",
-      image: "/images/service_lighting.jpg",
+      image: assetPath("/images/service_lighting.jpg"),
       features: [
         "Cabezales móviles Beam, Spot y Wash",
         "Estructuras y trusses certificados",
@@ -104,7 +127,7 @@ export const SITE_CONFIG = {
       title: "PANTALLAS LED",
       tagline: "Impacto visual de alta definición en cualquier escala",
       description: "Pantallas LED para escenarios, eventos corporativos, recitales y experiencias audiovisuales.",
-      image: "/images/service_led.jpg",
+      image: assetPath("/images/service_led.jpg"),
       features: [
         "Pódiums y módulos de alta tasa de refresco",
         "Procesadores de video y escaladores 4K",
@@ -118,7 +141,7 @@ export const SITE_CONFIG = {
       title: "SHOWS EN VIVO",
       tagline: "Infraestructura integral para producciones masivas",
       description: "Infraestructura técnica para festivales, recitales y espectáculos en vivo.",
-      image: "/images/service_live_shows.jpg",
+      image: assetPath("/images/service_live_shows.jpg"),
       features: [
         "Riders técnicos para bandas y artistas",
         "Técnicos y operadores de sonido y luces en vivo",
@@ -134,35 +157,35 @@ export const SITE_CONFIG = {
       id: "sociales",
       title: "EVENTOS SOCIALES",
       description: "Celebraciones y eventos particulares.",
-      image: "/images/event_social.jpg",
+      image: assetPath("/images/event_social.jpg"),
       badge: "Sociales & Fiestas",
     },
     {
       id: "corporativos",
       title: "EVENTOS CORPORATIVOS",
       description: "Eventos empresariales, presentaciones y encuentros.",
-      image: "/images/event_corporate.jpg",
+      image: assetPath("/images/event_corporate.jpg"),
       badge: "Empresas & Congresos",
     },
     {
       id: "culturales",
       title: "EVENTOS CULTURALES",
       description: "Propuestas culturales y espectáculos.",
-      image: "/images/event_cultural.jpg",
+      image: assetPath("/images/event_cultural.jpg"),
       badge: "Cultura & Arte",
     },
     {
       id: "educativos",
       title: "EVENTOS EDUCATIVOS",
       description: "Actos, jornadas y encuentros educativos.",
-      image: "/images/event_educational.jpg",
+      image: assetPath("/images/event_educational.jpg"),
       badge: "Academia & Actos",
     },
     {
       id: "shows-en-vivo",
       title: "SHOWS EN VIVO",
       description: "Festivales, recitales y espectáculos.",
-      image: "/images/service_live_shows.jpg",
+      image: assetPath("/images/service_live_shows.jpg"),
       badge: "Festivales & Recitales",
     },
   ] as EventTypeItem[],
@@ -172,50 +195,50 @@ export const SITE_CONFIG = {
       id: "gal-1",
       title: "Pantallas LED 3.9 Outdoor para Eventos",
       category: "Pantallas LED Outdoor",
-      image: "/images/gallery_outdoor_thumb.jpg",
+      image: assetPath("/images/gallery_outdoor_thumb.jpg"),
       alt: "Montaje y transmisión en Pantalla LED 3.9 Outdoor Quality Sound en evento al aire libre",
-      videoUrl: "/videos/pantallas_led_outdoor.mp4",
+      videoUrl: assetPath("/videos/pantallas_led_outdoor.mp4"),
       instagramUrl: "https://www.instagram.com/p/DBezp5gBx_-/",
     },
     {
       id: "gal-2",
       title: "Producción Audiovisual en Vivo — 15 Años & Fiestas",
       category: "Video en Vivo",
-      image: "/images/gallery_reel_thumb.jpg",
+      image: assetPath("/images/gallery_reel_thumb.jpg"),
       alt: "Resumen audiovisual de evento Quality Sound en vivo",
-      videoUrl: "/videos/reel_evento.mp4",
+      videoUrl: assetPath("/videos/reel_evento.mp4"),
       instagramUrl: "https://www.instagram.com/p/DXIxY7ODkPu/",
     },
     {
       id: "gal-3",
       title: "Iluminación & Estructuras Truss en Bodas",
       category: "Iluminación & Truss",
-      image: "/images/gallery_boda_thumb.jpg",
+      image: assetPath("/images/gallery_boda_thumb.jpg"),
       alt: "Puesta en escena de iluminación, trusses circulares y bolas de espejos para boda Quality Sound",
-      videoUrl: "/videos/boda_iluminacion.mp4",
+      videoUrl: assetPath("/videos/boda_iluminacion.mp4"),
       instagramUrl: "https://www.instagram.com/p/DDht4BEvDUu/",
     },
     {
       id: "gal-4",
       title: "Pantallas LED para Actos Escolares e Institucionales",
       category: "Pantallas LED",
-      image: "/images/gallery_led_escolares.jpg",
+      image: assetPath("/images/gallery_led_escolares.jpg"),
       alt: "Pantalla LED Quality Sound para eventos escolares y actos institucionales",
     },
     {
       id: "gal-5",
       title: "Show Robot Depredador LED & Láser para Fiestas",
       category: "Show Robot LED",
-      image: "/images/gallery_robot_thumb.jpg",
+      image: assetPath("/images/gallery_robot_thumb.jpg"),
       alt: "Show interactivo de Robot Depredador con armadura LED y lásers Quality Sound",
-      videoUrl: "/videos/robot_depredador.mp4",
+      videoUrl: assetPath("/videos/robot_depredador.mp4"),
       instagramUrl: "https://www.instagram.com/p/DBwzl_ehspD/",
     },
     {
       id: "gal-6",
       title: "Sistema Line Array & Montaje de Estructuras",
       category: "Estructuras & Sonido",
-      image: "/images/gallery_truss.jpg",
+      image: assetPath("/images/gallery_truss.jpg"),
       alt: "Montaje técnico de sonido y truss en estadio",
     },
   ] as GalleryItem[],

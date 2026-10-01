@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/config/siteConfig";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
           {/* Logo */}
           <Link href="#inicio" className="relative h-9 w-44 inline-block shrink-0">
             <Image
-              src="/images/logo.png"
+              src={assetPath("/images/logo.png")}
               alt="Quality Sound"
               fill
               sizes="176px"

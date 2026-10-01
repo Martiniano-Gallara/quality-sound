@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Rajdhani, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { SITE_CONFIG } from "@/config/siteConfig";
+import { SITE_CONFIG, assetPath } from "@/config/siteConfig";
 
 const rajdhani = Rajdhani({
   weight: ["500", "600", "700"],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Quality Sound ofrece servicios de sonido, iluminación y pantallas LED para eventos sociales, corporativos, culturales, educativos y shows en vivo.",
     images: [
       {
-        url: "/images/hero.jpg",
+        url: assetPath("/images/hero.jpg"),
         width: 1200,
         height: 630,
         alt: "Quality Sound - Escenario y Producción Audiovisual",
@@ -57,11 +57,11 @@ export const metadata: Metadata = {
     title: "Quality Sound | Sonido, Iluminación y Pantallas LED",
     description:
       "Servicios profesionales de sonido, iluminación y pantallas LED para eventos.",
-    images: ["/images/hero.jpg"],
+    images: [assetPath("/images/hero.jpg")],
   },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: assetPath("/images/logo.png"),
+    apple: assetPath("/images/logo.png"),
   },
 };
 

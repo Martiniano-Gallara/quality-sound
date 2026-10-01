@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ShieldCheck, Award, Wrench, CheckCircle } from "lucide-react";
-import { SITE_CONFIG } from "@/config/siteConfig";
+import { SITE_CONFIG, assetPath } from "@/config/siteConfig";
 
 export default function About() {
   const values = [
@@ -24,7 +24,7 @@ export default function About() {
           <div className="lg:col-span-5 relative">
             <div className="relative h-[420px] sm:h-[480px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/images/service_sound.jpg"
+                src={assetPath("/images/service_sound.jpg")}
                 alt="Equipo técnico y equipamiento Quality Sound"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

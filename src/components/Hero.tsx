@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, ArrowRight, ChevronDown } from "lucide-react";
-import { SITE_CONFIG, getWhatsAppUrl } from "@/config/siteConfig";
+import { SITE_CONFIG, getWhatsAppUrl, assetPath } from "@/config/siteConfig";
 
 export default function Hero() {
   const whatsappBudgetUrl = getWhatsAppUrl(
@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Background Image with Dark Cinematic Overlays */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src={assetPath("/images/hero.jpg")}
           alt="Producción audiovisual Quality Sound en escenario"
           fill
           priority

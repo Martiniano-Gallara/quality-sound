@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { MessageCircle, ArrowRight, Sparkles, Send } from "lucide-react";
-import { SITE_CONFIG, getWhatsAppUrl } from "@/config/siteConfig";
+import { SITE_CONFIG, getWhatsAppUrl, assetPath } from "@/config/siteConfig";
 
 export default function FinalCta() {
   const [selectedEventType, setSelectedEventType] = useState("Social");
@@ -35,7 +35,7 @@ export default function FinalCta() {
       {/* Background Stage Photography with Red/Blue/Violet Lighting Glow */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/gallery_laser.jpg"
+          src={assetPath("/images/gallery_laser.jpg")}
           alt="Concierto con iluminación y pantallas Quality Sound"
           fill
           sizes="100vw"

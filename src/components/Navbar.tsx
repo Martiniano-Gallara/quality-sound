@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { SITE_CONFIG } from "@/config/siteConfig";
+import { SITE_CONFIG, assetPath } from "@/config/siteConfig";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +40,7 @@ export default function Navbar() {
           >
             <div className="relative h-11 w-48 sm:h-12 sm:w-56">
               <Image
-                src="/images/logo.png"
+                src={assetPath("/images/logo.png")}
                 alt="Quality Sound - Sonido, Iluminación y Pantallas LED"
                 fill
                 priority
