@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { MessageCircle, ArrowRight, Sparkles, Send } from "lucide-react";
+import { ArrowRight, Sparkles, Send } from "lucide-react";
 import { SITE_CONFIG, getWhatsAppUrl, assetPath } from "@/config/siteConfig";
 
 export default function FinalCta() {
@@ -108,7 +108,18 @@ export default function FinalCta() {
               id="cta-speak-whatsapp"
               className="w-full sm:flex-1 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold tracking-wider uppercase text-white bg-gradient-to-r from-[#e61919] via-[#cc1414] to-[#991b1b] hover:from-[#ff2b2b] hover:to-[#e61919] transition-all duration-300 shadow-[0_0_30px_rgba(230,25,25,0.45)] hover:shadow-[0_0_40px_rgba(230,25,25,0.7)] hover:-translate-y-0.5 active:translate-y-0 border border-red-500/40"
             >
-              <MessageCircle className="w-5 h-5 fill-white/20" />
+              <svg
+                viewBox="0 0 24 24"
+                className="w-5 h-5 fill-white shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.18 8.18 0 01-5.83 2.41c-1.47 0-2.9-.39-4.16-1.14l-.3-.18-3.1.81.83-3.02-.19-.31a8.21 8.21 0 01-1.26-4.41c0-4.55 3.7-8.24 8.24-8.24zm4.5 11.75c-.25.7-.99 1.29-1.63 1.45-.44.11-1.01.2-2.95-.6-2.47-1.02-4.06-3.52-4.18-3.69-.12-.16-1-1.33-1-2.54s.63-1.8 1.05-2.05c.14-.08.31-.13.48-.13.13 0 .27.01.38.02.26.01.39.04.56.45.21.51.72 1.75.78 1.88.06.13.1.28.02.45-.08.16-.12.26-.24.41-.12.14-.26.32-.37.43-.13.12-.26.26-.11.51.15.25.65 1.07 1.39 1.73.96.85 1.76 1.12 2.01 1.24.25.13.4.11.55-.06.15-.17.63-.73.8-1 .17-.25.33-.21.56-.12.23.08 1.46.69 1.71.82.25.13.42.19.48.3.06.1.06.6-.19 1.28z"
+                />
+              </svg>
               <span>HABLAR POR WHATSAPP</span>
               <Send className="w-4 h-4 ml-1 opacity-90" />
             </a>
